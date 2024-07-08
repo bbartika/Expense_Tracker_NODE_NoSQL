@@ -2,7 +2,7 @@ const AWS=require('aws-sdk')
 require('dotenv').config();
 
 const uploadToS3=(data,fileName)=>{
-    const BUCKET_NAME="expensetrackingapp98"
+    const BUCKET_NAME="expensetrackingapp"
    
     let s3bucket=new AWS.S3({
         accessKeyId:process.env.IAM_USER_KEY,
