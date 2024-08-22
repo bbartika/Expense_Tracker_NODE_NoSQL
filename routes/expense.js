@@ -4,7 +4,9 @@ const expenseController=require('../controller/expense')
 const userAuthentication=require('../middleware/auth')
 const downloadController=require('../controller/download')
 
+
 // EXPENSE ROUTES
+
 router.post('/add-expenses',userAuthentication.authenticate,expenseController.addExpenses)
 router.get('/get-expenses',userAuthentication.authenticate,expenseController.getExpenses )
 router.get('/day-expenses',userAuthentication.authenticate,expenseController.getDayExpenses)
